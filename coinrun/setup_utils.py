@@ -27,7 +27,7 @@ def restore_file(restore_id, load_key='default'):
         Config.parse_args_dict(sub_dict)
     
     from coinrun.coinrunenv import init_args_and_threads
-    init_args_and_threads(4)
+    init_args_and_threads(4, rand_seed=42)
 
 def setup_and_load(use_cmd_line_args=True, **kwargs):
     """

@@ -14,13 +14,13 @@ import gym
 import gym.spaces
 import numpy as np
 import numpy.ctypeslib as npct
-from baselines.common.vec_env import VecEnv
-from baselines import logger
+from coinrun.vec_env import VecEnv
+from coinrun import logger
 
 from coinrun.config import Config
 
 from mpi4py import MPI
-from baselines.common import mpi_util
+from coinrun import mpi_util
 
 # if the environment is crashing, try using the debug build to get
 # a readable stack trace
