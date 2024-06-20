@@ -25,5 +25,5 @@ Note that this does not compile the environment, the environment will be compile
 ## Collect 10M transitions
 
 ```
-python -m coinrun.random_agent --num-levels 10000 --set-seed 42
+python -m coinrun.random_agent --num-levels 10000 --set-seed 42 --hres
 ```
