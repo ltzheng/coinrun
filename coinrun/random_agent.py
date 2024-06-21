@@ -1,17 +1,18 @@
 import numpy as np
 from coinrun import setup_utils, make
 import os
+from tqdm import tqdm
 from PIL import Image
 
 
-def random_agent(file_stem, num_episodes=10, max_steps=1000):
+def random_agent(file_stem, num_episodes=10000, max_steps=1000):
     # remove existing dataset
     if os.path.exists(file_stem):
         os.system(f"rm -r {file_stem}")
     os.makedirs(os.path.join(file_stem, "dataset/images"))
     setup_utils.setup_and_load()
 
-    for i in range(num_episodes):
+    for i in tqdm(range(num_episodes)):
         metadata = []
         print(f"Episode {i}")
         last_acts = None
